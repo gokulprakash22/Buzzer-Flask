@@ -5,9 +5,9 @@ import os
 app = Flask(__name__)
 socketio = SocketIO(app)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+@app.route('/<user>')
+def index(user):
+    return render_template('index.html', user=user)
 
 @socketio.on("message")
 def handleMessage(data):

@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="chat"></div>
-    <input id="chat-input" type="text"> <button onclick="sendMessage()">Send Message</button>
+    <input id="chat-input" type="hidden" value="{{user}}"> <button onclick="sendMessage()">Buzzer</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
     <script>
         socket = io()
