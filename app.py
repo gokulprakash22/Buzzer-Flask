@@ -5,6 +5,10 @@ import os
 app = Flask(__name__)
 socketio = SocketIO(app)
 
+@app.route('/')
+def home():
+    return "<center><h1>Welcome to Just Google It</h1></center>"
+
 @app.route('/<user>')
 def index(user):
     return render_template('index.html', user=user)
